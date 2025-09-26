@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 3px;
+  &__star {
+    i,
+    svg {
+      font-size: 14px;
+      color: $star;
+    }
+  }
+}

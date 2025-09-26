@@ -1,0 +1,157 @@
+
+
+/* ---------- ========== CTA Section Start Here ========== ---------- */
+.cta {
+  background-color: $section-bg-color;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 500px;
+  @include breakpoint (md) {
+    padding-top: 100px;
+    padding-bottom: 500px;
+  }
+  @include breakpoint (lg) {
+    padding-block: 160px;
+  }
+  @include breakpoint (xxl) {
+    padding-top: 193px;
+    padding-bottom: 198px;
+  }
+  &__content {
+    h2 {
+      padding-block-end: 13px;
+    }
+    p {
+      padding-block-end: 35px;
+      max-width: 560px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.6;
+      @include breakpoint (md) {
+        max-width: 660px;
+      }
+      @include breakpoint (lg) {
+        max-width: 420px
+      }
+      @include breakpoint (xl) {
+        max-width: 560px
+      }
+    }
+  }
+  &-btn {
+    &--outline {
+      width: 100%;
+      @include breakpoint (sm) {
+        width: inherit;
+      }
+      .custom-btn {
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        width: 100%;
+        @include breakpoint (sm) {
+          width: inherit;
+        }
+      }
+    }
+    &-wd {
+      width: 100%;
+      display: inline-block; 
+      @include breakpoint (sm) {
+        width: inherit;
+      }
+      .custom-btn {
+        width: 100%;
+        @include breakpoint (sm) {
+          width: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+// CTA shape start here 
+.cta__shape {
+  &-item {
+    &--style1 {
+      @extend %p-abs;
+      top: 640px;
+      right: 195px;
+      width: 162px;
+      animation: lrMove 1.5s ease-in-out infinite alternate;
+      @include breakpoint (sm) {
+        top: 460px;
+        right: 320px;
+      }
+      @include breakpoint (md) {
+        top: 460px;
+        right: 400px;
+      }
+      @include breakpoint (lg) {
+        top: 200px;
+        right: 250px;
+      }
+      @include breakpoint (xl) {
+        top: 170px;
+        right: 250px;
+      }
+      @include breakpoint (xxl) {
+        top: 65px;
+        right: 300px;
+        width: inherit;
+      }
+      @include breakpoint (xxxl) {
+        top: 65px;
+        right: 312px;
+      }
+    }
+  }
+  &-item {
+    &--style2 {
+      @extend %p-abs;
+      width: 162px;
+      bottom: 130px;
+      right: 14px;
+      animation: lrMove 1.5s ease-in-out infinite alternate;
+      @include breakpoint (sm) {
+        bottom: 120px;
+        right: 80px;
+      }
+      @include breakpoint (md) {
+        bottom: 123px;
+        right: 130px;
+      }
+      @include breakpoint (lg) {
+        bottom: 170px;
+        right: 60px;
+      }
+      @include breakpoint (xl) {
+        bottom: 170px;
+        right: 60px;
+      }
+      @include breakpoint (xxl) {
+        bottom: 60px;
+        right: -74px;
+        width: inherit;
+      }
+      @include breakpoint (xxxl) {
+        bottom: 55px;
+        right: -70px;
+      }
+    }
+  }
+}
+
+@keyframes lrMove {
+  0% {
+      transform: translateX(-10px);
+  }
+  100% {
+      transform: translateX(10px);
+  }
+}
+/* ---------- ========== CTA Section End Here ========== ---------- */
+
+
+

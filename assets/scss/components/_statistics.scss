@@ -1,0 +1,73 @@
+
+
+/* ---------- ========== Statistics Css Start Here ========== ---------- */
+.statistics {
+  background-color: $section-bg-color-2;
+  padding-block: 64px;
+  @include breakpoint (lg) {
+    padding-block: 96px;
+  }
+  .section-header {
+    p {
+      margin-bottom: 0;
+      padding-block-end: 46px;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+    width: 245px;
+    height: 108px;
+    .sep::after {
+      content: "";
+      height: 1px;
+      width: 343px;
+      display: inline-block;
+      background-color: #CBD5E1;
+      position: absolute;
+      left: -4ch;
+      bottom: -23px;
+    }
+  }
+  &__item:nth-child(1) .sep::after {
+    @include breakpoint (sm) {
+      height: 108px;
+      width: 1px;
+      left: 28ch;
+      left: 23ch;
+      bottom: -7px;
+    }
+  }
+
+  &__item:nth-child(2) .sep::after {
+    @include breakpoint (sm) {
+      display: none;
+    }
+    @include breakpoint (lg) {
+      display: inline-block;
+      height: 108px;
+      width: 1px;
+      left: 22ch;
+      bottom: -7px;
+    }
+  }
+  .stats-number {
+    color: $theme-color;
+    font-size: 60px;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+  .stats-label {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+/* ---------- ========== Statistics Css End Here ========== ---------- */
+

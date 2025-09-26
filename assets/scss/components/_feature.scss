@@ -1,0 +1,170 @@
+
+
+/* ---------- ========== Feature Section Start Here ========== ---------- */
+.feature {
+  background-color: $white-color;
+  padding-block: 64px;
+  @include breakpoint (lg) {
+  padding-block: 96px;
+  }
+  &-style1 {
+    .feature {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @include breakpoint (md) {
+          gap: 28px;
+        }
+        @include breakpoint (lg) {
+          gap: 32px;
+        }
+        @include breakpoint (xl) {
+          gap: 28px;
+        }
+        @include breakpoint (xxl) {
+          gap: 32px;
+        }
+      }
+      &__item {
+        &-thumb {
+          text-align: center;
+          margin-bottom: 17px;
+        }
+        &-content {
+          margin-inline: auto;
+          text-align: center;
+          h3 {
+            padding-block-end: 12px;
+            a {
+              transition: $transition;
+            }
+          }
+          p {
+            line-height: 1.6;
+            max-width: 384px;
+            margin: 0;
+            @include breakpoint (sm) {
+              max-width: 262px;
+            }
+            @include breakpoint (md) {
+              max-width: 320px;
+            }
+            @include breakpoint (lg) {
+              max-width: 278px;
+            }
+            @include breakpoint (xl) {
+              max-width: 350px;
+            }
+            @include breakpoint (xxl) {
+              max-width: 384px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-style2 {
+    .feature {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &__item {
+        &-content {
+          margin-bottom: 67px;
+          position: relative;
+          padding-left: 24px;
+          .sep {
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -11px;
+              height: 140px;
+              width: 4px;
+              background-color: $border-color-3;
+              border-radius: 50px;
+              @include breakpoint (sm) {
+                bottom: -30px;
+              }
+              @include breakpoint (lg) {
+                bottom: -22px;
+              }
+              @include breakpoint (xl) {
+                bottom: -30px;
+              }
+            }
+        
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -11px;
+              height: 140px;
+              width: 4px;
+              background-color: $theme-color;
+              border-radius: 50px;
+              transform: scaleY(0);
+              transform-origin: bottom;
+              transition: transform 0.5s ease;
+              @include breakpoint (sm) {
+                bottom: -30px;
+              }
+              @include breakpoint (lg) {
+                bottom: -22px;
+              }
+              @include breakpoint (xl) {
+                bottom: -30px;
+              }
+            }
+          }
+        
+          &:hover .sep::after,
+          &.active .sep::after {
+            transform: scaleY(1);
+          }
+          h3 {
+            padding-block-end: 3px;
+            transition: $transition;
+          }
+          p {
+            max-width: 468px;
+            @include breakpoint (lg) {
+              max-width: 315px;
+            }
+            @include breakpoint (xl) {
+              max-width: 468px;
+            }
+          }
+          &:hover,
+          &.active {
+            h3 {
+              color: $theme-color;
+            }
+          }
+        }
+        &-thumb {
+          img {
+            width: inherit;
+            border-radius: 32px;
+            @include breakpoint (lg) {
+              width: 500px;
+            }
+            @include breakpoint (xl) {
+              width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ---------- ========== Feature Section Start Here ========== ---------- */
+
+
+
+
+

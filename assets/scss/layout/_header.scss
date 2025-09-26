@@ -1,0 +1,106 @@
+
+
+/* ========== Header Css Start Here ========== */
+.header{
+  background-color: $white-color;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
+  .menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint (lg) {
+      gap: 30px;
+    }
+    &-area {
+      flex: 1;
+      transform: translateY(-9px);
+      transition: $transition;
+    }
+    & > li {
+      position: relative;
+      & > a {
+        font-weight: 700;
+        padding: 0px 1px;
+        color: $white-color;
+        display: block;
+        transition: $transition;
+        @include breakpoint (lg) {
+          color: $text-color;
+        }
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+  .logo {
+    img {
+      transform: translateY(5px);
+    }
+  }
+  .grp-btn {
+    .custom-btn {
+      display: none;
+      @include breakpoint (lg) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+/* Toggle Button (Mobile) */
+.header-bar {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.header-bar span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .menu-area {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $theme-color;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .grp-btn {
+    display: none;
+  }
+  .header-bar {
+    display: flex;
+  }
+  .menu-area.active {
+    display: flex;
+  }
+}
+/* ========== Header Css End Here ========== */

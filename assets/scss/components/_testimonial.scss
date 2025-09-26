@@ -1,0 +1,79 @@
+
+
+/* ---------- ========== Testimonial Section Start Here ========== ---------- */
+.testimonial {
+  background-color: $section-bg-color-2;
+  padding-block: 96px;
+  &-wrapper {
+    columns: 384px;
+    gap: 32px;
+  }
+  &__item {
+    border-radius: 1.5rem;
+    border: 1px solid $border-color;
+    padding: 1.5rem;
+    margin-bottom: 32px;
+    &-content {
+      p {
+        font-size: 18px;
+        margin: 0;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        line-height: 1.6;
+      }
+    }
+  }
+  &__userinfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    &-thumb {
+      img {
+        border-radius: 99%;
+      }
+    }
+    &-content {
+      h4 {
+        font-size: 14px;
+        a {
+          transition: $transition;
+        }
+        @include breakpoint (lg) {
+          font-size: 16px;
+        }
+      }
+      span {
+        display: inline-block;
+        padding-top: 4px;
+        font-size: 14px;
+        @include breakpoint (lg) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__btn {
+    @include breakpoint (sm) {
+      display: none;
+    }
+    .custom-btn {
+      width: 100%;
+      img {
+        margin-left: 10px;
+        transform: translateY(5px);
+      }
+    }
+  }
+}
+
+.d-none {
+  display: none;
+  @include breakpoint (sm) {
+    display: inline-block;
+  }
+}
+/* ---------- ========== Testimonial Section End Here ========== ---------- */
+
+
+

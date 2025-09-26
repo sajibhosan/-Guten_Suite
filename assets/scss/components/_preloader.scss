@@ -1,0 +1,206 @@
+
+
+/* ========== Preloader Section Start Here ========== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $theme-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    overflow: hidden;
+    background-image: linear-gradient(
+      120deg,
+      $theme-color 0%,
+      lighten($theme-color, 10%) 50%,
+      $theme-color 100%
+    );
+    background-size: 200% 100%;
+    animation: bgMove 3s linear infinite;
+    transition: opacity $animation-timing ease-in-out, visibility $animation-timing ease-in-out;
+  
+    &.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// Circle Animation
+.circle-container {
+  width: 200px;
+  height: 120px;
+  margin-bottom: 40px;
+  position: relative;
+
+  @include breakpoint (sm) {
+    width: 160px;
+    height: 80px;
+  }
+
+  @include breakpoint (lg) {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+.circle-left, .circle-right {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $white-color;
+  opacity: 0;
+
+  @include breakpoint (sm) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include breakpoint (lg) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.circle-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: moveLeft 3s infinite ease-in-out;
+}
+
+.circle-right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: moveRight 3s infinite ease-in-out;
+}
+
+// Logo Styles
+.logo-container {
+  position: relative;
+  margin-bottom: 30px;
+
+  .logo-text {
+    color: $white-color;
+    font-size: 53px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+
+    @include breakpoint (sm) {
+      font-size: 36px;
+    }
+
+    @include breakpoint (lg) {
+      font-size: 42px;
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(40px) rotate(10deg);
+      animation: jumpIn 0.5s forwards;
+
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          animation-delay: 0.1s * $i;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes jumpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(10deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translate(200px, -50%);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translate(-200px, -50%);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+// Content Styles
+.content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: $theme-color;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+}
+/* ========== Preloader Section End Here ========== */

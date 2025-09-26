@@ -1,0 +1,64 @@
+.section-header {
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+  .subtittle {
+    border-radius: 50px;
+    background-color: $section-bg-color;
+    color: $theme-color;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    padding-block: 7px;
+    padding-inline: 11px;
+    margin-bottom: 25px;
+  }
+  span {
+    border-radius: 99%;
+    width: 48px;
+    height: 48px;
+    background-color: $section-bg-color;
+    display: inline-block;
+    place-items: center;
+    display: grid;
+    margin-inline: auto;
+    margin-bottom: 21px;
+    @include breakpoint (lg) {
+      width: 56px;
+      height: 56px;
+    }
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  h1 {
+    margin-bottom: 27px;
+  }
+  h2 {
+    padding-bottom: 24px;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 45px;
+    margin-top: 0;
+    line-height: 1.6;
+    @include breakpoint (lg) {
+      margin-bottom: 64px;
+      font-size: 20px;
+    }
+  }
+  &-style2 {
+    text-align: left;
+    margin-inline: initial;
+    h2 {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+
+
+

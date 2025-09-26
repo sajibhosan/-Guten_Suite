@@ -1,0 +1,108 @@
+
+
+/* ========== Banner Css Start Here ========== */
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 145px;
+  padding-bottom: 133px;
+  @include breakpoint (lg) {
+    padding-top: 180px;
+    padding-bottom: 160px;
+  }
+  &__content {
+    max-width: 800px;
+    text-align: center;
+    margin-inline: auto;
+    span {
+      border-radius: 25px;
+      background-color: $section-bg-color;
+      color: $theme-color;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      padding-inline: 12px;
+      padding-block: 6px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin-bottom: 28px;
+      letter-spacing: -0.014em;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 48px;
+      line-height: 1.6;
+      @include breakpoint (lg) {
+        font-size: 18px;
+      }
+    }
+    
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+    @include breakpoint (lg) {
+      margin-bottom: 68px;
+    }
+  }
+  &__dashboard {
+    position: relative;
+    display: flex;
+    .dashboard-main {
+      border-radius: 16px;
+      border: 1px solid $border-color;
+      margin-left: 0px;
+      box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.25), 0px 352px 141px rgba(30, 41, 59, 0.01), 0px 198px 119px rgba(30, 41, 59, 0.05), 0px 88px 88px rgba(30, 41, 59, 0.09), 0px 22px 48px rgba(30, 41, 59, 0.1);
+      border-radius: 16px;
+      @include breakpoint (xxl) {
+        margin-left: 104px;
+      }
+    }
+    .dashboard-mobile {
+      position: absolute;
+      bottom: -41px;
+      right: 34px;
+      width: 87px;
+      height: 177px;
+      animation: lrMove 1.5s ease-in-out infinite alternate;
+      @include breakpoint (sm) {
+        width: 200px;
+        height: 365px;
+        bottom: -72px;
+      }
+      @include breakpoint (md) {
+        width: inherit;
+        height: inherit;
+      }
+      @include breakpoint (md) {
+        bottom: -75px;
+      }
+      @include breakpoint (lg) {
+        right: -20px;
+      }
+      @include breakpoint (xl) {
+        right: 140px;
+      }
+    }
+  }
+}
+
+@keyframes lrMove {
+  0% {
+      transform: translateX(-10px);
+  }
+  100% {
+      transform: translateX(10px);
+  }
+}
+/* ========== Banner Css End Here ========== */
+
+
+/* Desktop-min 1 */
+
+

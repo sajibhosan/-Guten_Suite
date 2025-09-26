@@ -1,0 +1,126 @@
+/* ---------- ========== Footer Section Start Here ========== ---------- */
+.footer {
+  padding-block: 64px;
+
+  @include breakpoint(lg) {
+    padding-block: 96px;
+  }
+
+  &__nav {
+    border-bottom: 1px solid $border-color-2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+    @include breakpoint (sm) {
+      gap: 29px;
+    }
+    @include breakpoint (xxl) {
+      gap: 32px;
+    }
+
+    &-link {
+      color: $text-color;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+
+    &-item {
+      margin-bottom: 12px;
+    }
+
+    &-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  &__column-title {
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    flex: 1;
+    min-width: 160px;
+  }
+
+  // Footer copyright styles
+  &__copyright {
+    padding-top: 25px;
+
+    &-btn {
+      order: 3;
+      @include breakpoint (sm) {
+        order: initial;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+
+      @include breakpoint(sm) {
+        gap: 10px;
+        justify-content: space-between;
+      }
+    }
+
+    &-content {
+      span {
+        color: $text-color-2;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Back to top button
+#back__to-top {
+  background-color: transparent;
+  border: 1px solid $border-color;
+  width: 48px;
+  height: 48px;
+  border-radius: 99%;
+}
+
+/* ---------- ========== Responsive Styles ========== ---------- */
+
+@media (max-width: 992px) {
+  .footer__nav {
+    gap: 20px;
+  }
+
+  .footer__nav-column {
+    flex-basis: calc(26.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__nav-column {
+    flex-basis: calc(20% - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__nav-column {
+    flex-basis: 48%;
+  }
+
+  .footer__column-title {
+    padding-bottom: 1px;
+    border-bottom: none;
+    cursor: default;
+  }
+}
+/* ---------- ========== Footer Section End Here ========== ---------- */
+
+

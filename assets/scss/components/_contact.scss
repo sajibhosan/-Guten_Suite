@@ -1,0 +1,74 @@
+
+
+/* ---------- ========== Contact Section Start Here ========== ---------- */
+.contact {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  .section-header {
+    h2 {
+      padding-block-end: 25px;
+    }
+    .pera {
+      font-size: 18px;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @include breakpoint (md) {
+      gap: 32px;
+    }
+    @include breakpoint (xl) {
+      gap: 20px;
+    }
+    @include breakpoint (xxl) {
+      gap: 32px;
+    }
+  }
+  &__item {
+    border-radius: 24px;
+    border: 1px solid $border-color;
+    padding-inline: 24px;
+    padding-block: 24px 26px;
+    width: 343px;
+    height: 178px;
+    @include breakpoint (sm) {
+      width: 260px;
+      height: 184px;
+      padding-inline: 24px;
+      padding-block: 24px 16px;
+    }
+    @include breakpoint (xxl) {
+      width: 280px;
+      height: 184px;
+      padding-inline: 24px;
+      padding-block: 24px 16px;
+    }
+    &-thumb {
+      img {
+        padding-block-end: 23px;
+      }
+    }
+    &-content {
+      position: relative;
+      h3 {
+        font-weight: 800;
+        padding-bottom: 12px;
+        a {
+          transition: $transition;
+        }
+      }
+      p {
+        max-width: 193px;
+        margin: 0;
+        color: $title-color;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+/* ---------- ========== Contact Section End Here ========== ---------- */
